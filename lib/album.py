@@ -1,10 +1,10 @@
-class Artist:
+class Album:
     # We initialise with all of our attributes
     # Each column in the table should have an attribute here
-    def __init__(self, id, name, genre):
-        self.id = id
-        self.name = name
-        self.genre = genre
+    def __init__(self, title, release_year, artist_id):
+        self.title = title
+        self.release_year = release_year
+        self.artist_id = artist_id
 
     # ok so putting the id, name and genre into the __init__ class means that these attributes can be accessed from other places outside
     # of the class...for example accessing artist.name and artist.genre when adding artists to the artists table via the artist_repository.create() method!
@@ -19,7 +19,7 @@ class Artist:
 
     
     def __repr__(self):
-        return f"Artist({self.id}, {self.name}, {self.genre})"
+        return f"Album({self.title}, {self.release_year}, {self.artist_id})"
     # This method makes it look nicer when we print an Artist... but is actually important for other reasons too:
     # the name __repr__ generally means string representation...
     # the __repr__ method is usually used to return a string in the format of an original object.
